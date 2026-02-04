@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 
 class ProjectImageController extends Controller
 {
+    // Store/upload a new image
     public function store(Request $request, Project $project)
     {
         $request->validate([
@@ -29,7 +30,7 @@ class ProjectImageController extends Controller
 
         $url = Storage::disk('s3')->url($path);
 
-        $image = ProjectImage::create([
+        ProjectImage::create([
             'project_id' => $project->id,
             'filename' => $file->getClientOriginalName(),
             'path' => $path,
@@ -38,13 +39,10 @@ class ProjectImageController extends Controller
             'url' => $url
         ]);
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Image uploaded successfully',
-            'image' => $image
-        ], 201);
+        return redirect()->back()->with('success', 'Image uploaded successfully!');
     }
 
+    // Delete an image
     public function destroy(ProjectImage $image)
     {
         Storage::disk('s3')->delete($image->path);
@@ -56,6 +54,7 @@ class ProjectImageController extends Controller
         ]);
     }
 
+    // Get all images for a project
     public function index(Project $project)
     {
         return response()->json([

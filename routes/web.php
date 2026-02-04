@@ -15,3 +15,13 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/images/{image}', [ProjectImageController::class, 'destroy'])->name('images.destroy');
     Route::get('/projects/{project}/images', [ProjectImageController::class, 'index'])->name('projects.images.index');
 });  // ← Added closing parenthesis and semicolon
+use App\Http\Controllers\GalleryController;
+
+Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
+Route::get('/gallery/project/{project}', [GalleryController::class, 'projectGallery'])->name('gallery.project');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/projects/{project}/upload', function($id) {
+        $project = App\Models\Project::findOrFail($id);
+        return view('projects.upload', compact('project'));
+    })->name('projects.upload');
+});
