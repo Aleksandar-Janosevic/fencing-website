@@ -184,6 +184,8 @@
                 <li><a href="{{ route('fencing.about') }}">About HEMA</a></li>
                 <li><a href="{{ route('fencing.techniques') }}">Techniques</a></li>
                 <li><a href="{{ route('fencing.equipment') }}">Equipment</a></li>
+                <li><a href="{{ route('gallery.index') }}">Gallery</a></li>
+
             </ul>
         </div>
     </nav>
