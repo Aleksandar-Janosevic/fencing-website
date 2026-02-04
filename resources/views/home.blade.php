@@ -1,43 +1,44 @@
 @extends('layouts.app')
 
-@section('title', 'Fencing Hub - Home')
+@section('title', 'HEMA for Dummies - Home')
 
 @section('content')
 <div class="container">
     <div class="hero">
-        <h1>Welcome to Fencing Hub</h1>
-        <p>Discover the art and sport of Olympic fencing</p>
+        <h1>Welcome to HEMA for Dummies</h1>
+        <p>Discover the art and science of Historical European Martial Arts</p>
     </div>
 
     <div class="grid">
         <div class="card">
-            <h3>⚔️ About Fencing</h3>
-            <p>Learn about the history, rules, and disciplines of this elegant Olympic sport that combines athleticism, strategy, and precision.</p>
+            <h3>⚔️ About HEMA</h3>
+            <p>Learn about the history, traditions, and disciplines of Historical European Martial Arts — reviving combat techniques from medieval and Renaissance treatises.</p>
             <a href="{{ route('fencing.about') }}" class="btn">Learn More</a>
         </div>
 
         <div class="card">
             <h3>🎯 Techniques</h3>
-            <p>Explore fundamental fencing techniques, footwork, and tactical strategies used by fencers worldwide.</p>
+            <p>Explore historical combat techniques from masters like Liechtenauer, Fiore dei Liberi, and Meyer, including longsword, rapier, and more.</p>
             <a href="{{ route('fencing.techniques') }}" class="btn">Explore Techniques</a>
         </div>
 
         <div class="card">
             <h3>🛡️ Equipment</h3>
-            <p>Discover the essential equipment needed for fencing, from weapons to protective gear and competition attire.</p>
+            <p>Discover the essential equipment for HEMA practice, from synthetic and steel trainers to protective gear designed for full-contact sparring.</p>
             <a href="{{ route('fencing.equipment') }}" class="btn">View Equipment</a>
         </div>
     </div>
 
     <div class="content">
-        <h2>Why Choose Fencing?</h2>
-        <p>Fencing is a unique sport that offers numerous benefits:</p>
+        <h2>Why Choose HEMA?</h2>
+        <p>Historical European Martial Arts offers a unique combination of history, athleticism, and martial skill:</p>
         <ul>
-            <li><strong>Physical Fitness:</strong> Improves cardiovascular health, flexibility, and coordination</li>
-            <li><strong>Mental Agility:</strong> Develops strategic thinking and quick decision-making skills</li>
-            <li><strong>Discipline:</strong> Teaches respect, sportsmanship, and self-control</li>
-            <li><strong>Competition:</strong> Participate in local, national, and international tournaments</li>
-            <li><strong>Community:</strong> Join a welcoming community of fencers of all ages and skill levels</li>
+            <li><strong>Historical Connection:</strong> Study and practice authentic fighting techniques from surviving medieval and Renaissance manuals</li>
+            <li><strong>Physical Fitness:</strong> Full-body workout that builds strength, endurance, and coordination</li>
+            <li><strong>Mental Challenge:</strong> Interpret historical sources and apply tactical thinking in combat</li>
+            <li><strong>Diverse Weapons:</strong> Train with longsword, rapier, sword and buckler, messer, dagger, polearms, and more</li>
+            <li><strong>Competition:</strong> Participate in tournaments with rulesets designed to reward historical technique</li>
+            <li><strong>Community:</strong> Join a global community of passionate martial artists and historians</li>
         </ul>
     </div>
 </div>

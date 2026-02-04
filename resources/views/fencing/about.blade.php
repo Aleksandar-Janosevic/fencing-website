@@ -1,59 +1,63 @@
 @extends('layouts.app')
 
-@section('title', 'About Fencing')
+@section('title', 'About HEMA')
 
 @section('content')
 <div class="container">
     <div class="content">
-        <h2>About Fencing</h2>
-        <p>Fencing is one of the oldest Olympic sports, with roots dating back to ancient sword fighting. Modern fencing has evolved into a refined sport that combines physical prowess with mental strategy.</p>
+        <h2>About HEMA</h2>
+        <p>Historical European Martial Arts (HEMA) is the study and practice of historical fighting systems from Europe, based on surviving treatises, manuals, and other historical sources. HEMA practitioners aim to reconstruct and revive these martial traditions through scholarly research and practical application.</p>
 
-        <h3>History of Fencing</h3>
-        <p>Fencing has been practiced for thousands of years, initially as a combat skill. It became a sport in the 15th century and has been part of the modern Olympic Games since their inception in 1896.</p>
+        <h3>History of HEMA</h3>
+        <p>While Europeans practiced martial arts for centuries, much of this knowledge was nearly lost over time. The modern HEMA movement began in the 1990s when practitioners started systematically studying surviving fight books (Fechtbücher) and treatises. Today, HEMA has grown into a worldwide community with thousands of practitioners, clubs, and tournaments.</p>
 
-        <h3>The Three Disciplines</h3>
-        <p>Olympic fencing consists of three weapon disciplines, each with unique rules and characteristics:</p>
+        <h3>Major Traditions</h3>
+        <p>HEMA encompasses many weapon systems and fighting traditions from different eras and regions:</p>
 
         <div class="grid">
             <div class="card">
-                <span class="weapon-type">Foil</span>
-                <h3>Foil</h3>
-                <p><strong>Target Area:</strong> Torso only</p>
-                <p><strong>Scoring:</strong> Point (tip) only</p>
-                <p><strong>Right of Way:</strong> Yes</p>
-                <p>The foil is a light, flexible weapon emphasizing finesse and precision. It's often the first weapon beginners learn.</p>
+                <span class="weapon-type">German</span>
+                <h3>German Longsword</h3>
+                <p><strong>Era:</strong> 14th–16th century</p>
+                <p><strong>Key Masters:</strong> Johannes Liechtenauer, Sigmund Ringeck, Hans Talhoffer</p>
+                <p><strong>Weapon:</strong> Two-handed longsword</p>
+                <p>The German tradition is built around the teachings of Johannes Liechtenauer, encoded in cryptic verses. It emphasizes the concepts of Vor (before), Nach (after), Indes (meanwhile), and the five master cuts (Meisterhaue).</p>
             </div>
 
             <div class="card">
-                <span class="weapon-type">Épée</span>
-                <h3>Épée</h3>
-                <p><strong>Target Area:</strong> Entire body</p>
-                <p><strong>Scoring:</strong> Point (tip) only</p>
-                <p><strong>Right of Way:</strong> No</p>
-                <p>The épée is the heaviest weapon with the largest bell guard. Both fencers can score simultaneously, making it a game of patience and strategy.</p>
+                <span class="weapon-type">Italian</span>
+                <h3>Italian Traditions</h3>
+                <p><strong>Era:</strong> 14th–17th century</p>
+                <p><strong>Key Masters:</strong> Fiore dei Liberi, Filippo Vadi, Ridolfo Capoferro</p>
+                <p><strong>Weapons:</strong> Longsword, rapier, dagger</p>
+                <p>Italian traditions range from Fiore's armored combat system to the elegant rapier fencing of the Renaissance. Fiore's "Flower of Battle" covers unarmed combat, dagger, sword, polearms, and mounted combat.</p>
             </div>
 
             <div class="card">
-                <span class="weapon-type">Sabre</span>
-                <h3>Sabre</h3>
-                <p><strong>Target Area:</strong> Upper body (above waist)</p>
-                <p><strong>Scoring:</strong> Point and edge</p>
-                <p><strong>Right of Way:</strong> Yes</p>
-                <p>The sabre is the fastest weapon in fencing. Cuts and slashes with the edge are allowed, making for dynamic and aggressive bouts.</p>
+                <span class="weapon-type">English</span>
+                <h3>English Martial Arts</h3>
+                <p><strong>Era:</strong> 15th–18th century</p>
+                <p><strong>Key Masters:</strong> George Silver, Joseph Swetnam, Donald McBane</p>
+                <p><strong>Weapons:</strong> Sword and buckler, backsword, quarterstaff</p>
+                <p>English traditions include medieval sword and buckler fighting, Renaissance backsword, and later smallsword. George Silver's works champion the "true fight" against Italian rapier innovations.</p>
             </div>
         </div>
 
-        <h3>Scoring and Rules</h3>
-        <p>Fencing bouts are fought on a 14-meter strip called a piste. In modern competitive fencing:</p>
+        <h3>Common Weapons in HEMA</h3>
+        <p>HEMA practitioners study a wide variety of historical weapons:</p>
         <ul>
-            <li>Bouts are fought to 15 touches or for a maximum of 9 minutes (three 3-minute periods)</li>
-            <li>Electronic scoring systems register valid touches</li>
-            <li>Fencers wear metallic lames (vests) to register touches on valid target areas</li>
-            <li>Right of way (priority) applies in foil and sabre but not épée</li>
+            <li><strong>Longsword:</strong> The most popular HEMA weapon, a two-handed sword used for cutting and thrusting</li>
+            <li><strong>Rapier:</strong> A long thrusting sword popular in the 16th and 17th centuries</li>
+            <li><strong>Sword and Buckler:</strong> A one-handed sword paired with a small shield</li>
+            <li><strong>Messer:</strong> A single-edged German sword or large knife</li>
+            <li><strong>Sabre:</strong> A curved cutting sword with military applications</li>
+            <li><strong>Dagger:</strong> Often studied as a standalone system or alongside other weapons</li>
+            <li><strong>Polearms:</strong> Spears, halberds, pollaxes, and other staff weapons</li>
+            <li><strong>Wrestling (Ringen):</strong> Unarmed grappling, often integrated with armed combat</li>
         </ul>
 
         <h3>Getting Started</h3>
-        <p>Most fencing clubs welcome beginners of all ages. You'll typically start with basic footwork and blade work before progressing to bouting. Many clubs offer equipment rentals for newcomers.</p>
+        <p>Many HEMA clubs welcome beginners with no prior experience. Most clubs start new members with synthetic (nylon) training weapons before progressing to steel. You'll learn fundamental concepts, guards, cuts, and thrusts before moving to partnered drills and eventually sparring. Research local clubs and attend an introductory class to see if HEMA is right for you!</p>
     </div>
 </div>
 @endsection

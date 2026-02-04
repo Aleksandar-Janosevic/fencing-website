@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Fencing Hub')</title>
+    <title>@yield('title', 'HEMA for Dummies')</title>
     <style>
         * {
             margin: 0;
@@ -178,10 +178,10 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">⚔️ Fencing Hub</div>
+            <div class="logo">⚔️ HEMA for Dummies</div>
             <ul class="nav-links">
                 <li><a href="{{ route('home') }}">Home</a></li>
-                <li><a href="{{ route('fencing.about') }}">About Fencing</a></li>
+                <li><a href="{{ route('fencing.about') }}">About HEMA</a></li>
                 <li><a href="{{ route('fencing.techniques') }}">Techniques</a></li>
                 <li><a href="{{ route('fencing.equipment') }}">Equipment</a></li>
             </ul>
@@ -191,7 +191,7 @@
     @yield('content')
 
     <footer>
-        <p>&copy; 2026 Fencing Hub. All rights reserved.</p>
+        <p>&copy; 2026 HEMA for Dummies. All rights reserved.</p>
     </footer>
 </body>
 </html>
