@@ -23,5 +23,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/projects/{project}/upload', function($id) {
         $project = App\Models\Project::findOrFail($id);
         return view('projects.upload', compact('project'));
-    })->name('projects.upload');
+    })->name('gallery.project);
 });
