@@ -74,7 +74,7 @@
 </div>
 
 <div class="container">
-    <a href="{{ route('gallery.index') }}" class="back-link">← Back to Gallery</a>
+    <a href="{{ route('Gallery.index') }}" class="back-link">← Back to Gallery</a>
 
     <div class="project-info">
         <h2>Project Details</h2>

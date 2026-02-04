@@ -20,10 +20,4 @@ class GalleryController extends Controller
     // Display images for a specific project
     public function projectGallery($projectId)
     {
-        $project = Project::with('images')->findOrFail($projectId);
-
-        $images = $project->images()->latest()->get();
-
-        return view('Gallery.project', compact('project', 'images'));
-    }
-}
+        $project = Project::with('images')->findOrFail($project

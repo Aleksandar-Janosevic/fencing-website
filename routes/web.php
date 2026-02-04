@@ -17,11 +17,11 @@ Route::middleware(['auth'])->group(function () {
 });  // ← Added closing parenthesis and semicolon
 use App\Http\Controllers\GalleryController;
 
-Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
-Route::get('/gallery/project/{project}', [GalleryController::class, 'projectGallery'])->name('gallery.project');
+Route::get('/Gallery', [GalleryController::class, 'index'])->name('Gallery.index');
+Route::get('/Gallery/project/{project}', [GalleryController::class, 'projectGallery'])->name('Gallery.project');
 Route::middleware(['auth'])->group(function () {
     Route::get('/projects/{project}/upload', function($id) {
         $project = App\Models\Project::findOrFail($id);
         return view('projects.upload', compact('project'));
-    })->name('gallery.project');
+    })->name('Gallery.project');
 });

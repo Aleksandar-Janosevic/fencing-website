@@ -107,7 +107,7 @@
     </form>
 
     <br>
-    <a href="{{ route('gallery.project', $project->id) }}">View Project Gallery</a>
+    <a href="{{ route('Gallery.project', $project->id) }}">View Project Gallery</a>
 </div>
 </body>
 </html>
