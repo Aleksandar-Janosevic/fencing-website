@@ -34,14 +34,14 @@
             padding: 2rem;
         }
 
-        .gallery-grid {
+        .Gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
 
-        .gallery-item {
+        .Gallery-item {
             background: white;
             border-radius: 8px;
             overflow: hidden;
@@ -49,29 +49,29 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .gallery-item:hover {
+        .Gallery-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        .gallery-item img {
+        .Gallery-item img {
             width: 100%;
             height: 250px;
             object-fit: cover;
             cursor: pointer;
         }
 
-        .gallery-item-info {
+        .Gallery-item-info {
             padding: 1rem;
         }
 
-        .gallery-item-info h3 {
+        .Gallery-item-info h3 {
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
             color: #2c3e50;
         }
 
-        .gallery-item-info p {
+        .Gallery-item-info p {
             color: #7f8c8d;
             font-size: 0.9rem;
         }
@@ -147,13 +147,13 @@
 
 <div class="container">
     @if($images->count() > 0)
-        <div class="gallery-grid">
+        <div class="Gallery-grid">
             @foreach($images as $image)
-                <div class="gallery-item">
+                <div class="Gallery-item">
                     <img src="{{ $image->url }}"
                          alt="{{ $image->filename }}"
                          onclick="openLightbox('{{ $image->url }}')">
-                    <div class="gallery-item-info">
+                    <div class="Gallery-item-info">
                         <h3>{{ $image->project->title ?? 'Untitled Project' }}</h3>
                         <p>{{ $image->project->location ?? 'Location not specified' }}</p>
                     </div>

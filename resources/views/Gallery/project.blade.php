@@ -36,13 +36,13 @@
             margin-bottom: 2rem;
         }
 
-        .gallery-grid {
+        .Gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 1.5rem;
         }
 
-        .gallery-item img {
+        .Gallery-item img {
             width: 100%;
             height: 250px;
             object-fit: cover;
@@ -51,7 +51,7 @@
             transition: transform 0.3s ease;
         }
 
-        .gallery-item img:hover {
+        .Gallery-item img:hover {
             transform: scale(1.05);
         }
 
@@ -84,9 +84,9 @@
     </div>
 
     @if($project->images->count() > 0)
-        <div class="gallery-grid">
+        <div class="Gallery-grid">
             @foreach($project->images as $image)
-                <div class="gallery-item">
+                <div class="Gallery-item">
                     <img src="{{ $image->url }}"
                          alt="{{ $image->filename }}"
                          onclick="window.open('{{ $image->url }}', '_blank')">
