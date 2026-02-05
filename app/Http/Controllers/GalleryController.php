@@ -33,9 +33,3 @@ class GalleryController extends Controller
         }
     }
 }
-    public function projectGallery($projectId)
-    {
-        $project = Project::with('images')->findOrFail($projectId);
-        return view('gallery.project', compact('project'));
-    }
-}
