@@ -34,6 +34,18 @@
             padding: 2rem;
         }
 
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
         .Gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -146,6 +158,8 @@
 </div>
 
 <div class="container">
+    <a href="{{ route('home') }}" class="back-link">← Back to Home</a>
+
     @if($images->count() > 0)
         <div class="Gallery-grid">
             @foreach($images as $image)
