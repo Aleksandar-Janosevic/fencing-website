@@ -21,14 +21,14 @@ class ProjectImageController extends Controller
 
         $filename = Str::uuid() . '.' . $file->getClientOriginalExtension();
 
-        $path = Storage::disk('s3')->putFileAs(
+        $path = Storage::disk('fencing_website')->putFileAs(
             'fencing-projects/' . $project->id,
             $file,
             $filename,
             'public'
         );
 
-        $url = Storage::disk('s3')->url($path);
+        $url = Storage::disk('fencing_website')->url($path);
 
         ProjectImage::create([
             'project_id' => $project->id,
@@ -45,7 +45,7 @@ class ProjectImageController extends Controller
     // Delete an image
     public function destroy(ProjectImage $image)
     {
-        Storage::disk('s3')->delete($image->path);
+        Storage::disk('fencing_website')->delete($image->path);
         $image->delete();
 
         return response()->json([
