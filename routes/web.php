@@ -49,15 +49,17 @@ Route::post('/admin/projects', function(\Illuminate\Http\Request $request) {
         ->with('success', 'Project created! Now upload images.');
 })->name('admin.projects.store');
 
-// Upload route (can be public for now, add auth later)
+// Upload routes (public for now, add auth later)
 Route::get('/projects/{project}/upload', function($id) {
     $project = App\Models\Project::findOrFail($id);
     return view('projects.upload', compact('project'));
 })->name('projects.upload');
 
-// Protected routes (require authentication)
+Route::post('/projects/{project}/images', [ProjectImageController::class, 'store'])->name('projects.images.store');
+Route::delete('/images/{image}', [ProjectImageController::class, 'destroy'])->name('images.destroy');
+Route::get('/projects/{project}/images', [ProjectImageController::class, 'index'])->name('projects.images.index');
+
+// Protected routes (require authentication) - empty for now
 Route::middleware(['auth'])->group(function () {
-    Route::post('/projects/{project}/images', [ProjectImageController::class, 'store'])->name('projects.images.store');
-    Route::delete('/images/{image}', [ProjectImageController::class, 'destroy'])->name('images.destroy');
-    Route::get('/projects/{project}/images', [ProjectImageController::class, 'index'])->name('projects.images.index');
+    // Add auth-protected routes here later
 });

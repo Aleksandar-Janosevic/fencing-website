@@ -15,7 +15,7 @@ class GalleryController extends Controller
             return view('gallery.index', compact('images'));
         } catch (\Exception $e) {
             // Log the error for debugging
-            \Log::error('Gallery error: ' . $e->getMessage());
+            \Log::error('gallery error: ' . $e->getMessage());
 
             // Return with empty collection
             $images = new \Illuminate\Pagination\LengthAwarePaginator([], 0, 12);
