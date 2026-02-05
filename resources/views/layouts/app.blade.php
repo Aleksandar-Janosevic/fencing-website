@@ -197,3 +197,10 @@
     </footer>
 </body>
 </html>
+<ul class="nav-links">
+    <li><a href="{{ route('home') }}">Home</a></li>
+    <li><a href="{{ route('fencing.about') }}">About HEMA</a></li>
+    <li><a href="{{ route('fencing.techniques') }}">Techniques</a></li>
+    <li><a href="{{ route('fencing.equipment') }}">Equipment</a></li>
+    <li><a href="{{ route('gallery.index') }}">Gallery</a></li> <!-- fixed -->
+</ul>
