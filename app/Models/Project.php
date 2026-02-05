@@ -2,16 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Project extends Model
-{
-    //
-}
-
-
-namespace App\Models;
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -27,6 +17,7 @@ class Project extends Model
         'price',
         'status'
     ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
