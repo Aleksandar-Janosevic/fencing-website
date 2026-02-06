@@ -65,7 +65,7 @@
 
         .hero {
             background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 73, 94, 0.7)),
-            url('/images/fencing_park.jpg');
+            url('https://fls-a0ffbd4c-ac6e-4ef7-85f8-ea5ea54867d0.laravel.cloud/fencing-projects/5/6d8544bd-5346-4ceb-b67f-56ad3719465a.jpg');
             background-size: cover;
             background-position: center;
             color: white;
