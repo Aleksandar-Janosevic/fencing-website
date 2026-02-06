@@ -64,7 +64,10 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 73, 94, 0.7)),
+            url('/images/fencing_park.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
             padding: 4rem 2rem;
             text-align: center;
