@@ -31,13 +31,32 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
+            padding: 0 1rem;
+            flex-wrap: wrap;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: bold;
             color: #3498db;
+        }
+
+        /* Mobile menu toggle button */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            transition: all 0.3s;
         }
 
         .nav-links {
@@ -51,6 +70,8 @@
             text-decoration: none;
             transition: color 0.3s;
             font-weight: 500;
+            display: block;
+            padding: 0.5rem 0;
         }
 
         .nav-links a:hover {
@@ -60,7 +81,7 @@
         .container {
             max-width: 1200px;
             margin: 2rem auto;
-            padding: 0 2rem;
+            padding: 0 1rem;
         }
 
         .hero {
@@ -69,25 +90,25 @@
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 4rem 2rem;
+            padding: 3rem 1.5rem;
             text-align: center;
             margin-bottom: 2rem;
             border-radius: 10px;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             opacity: 0.9;
         }
 
         .content {
             background: white;
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
@@ -98,12 +119,14 @@
             margin-bottom: 1rem;
             border-bottom: 3px solid #3498db;
             padding-bottom: 0.5rem;
+            font-size: 1.5rem;
         }
 
         .content h3 {
             color: #34495e;
             margin-top: 1.5rem;
             margin-bottom: 0.5rem;
+            font-size: 1.2rem;
         }
 
         .content p {
@@ -112,14 +135,14 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
             margin-top: 2rem;
         }
 
         .card {
             background: white;
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
@@ -144,6 +167,8 @@
             border-radius: 5px;
             transition: background 0.3s;
             margin-top: 1rem;
+            min-height: 44px;
+            text-align: center;
         }
 
         .btn:hover {
@@ -154,7 +179,7 @@
             background: #2c3e50;
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: 2rem 1rem;
             margin-top: 3rem;
         }
 
@@ -166,39 +191,134 @@
             border-radius: 20px;
             font-size: 0.9rem;
             margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
         }
 
         ul {
-            margin-left: 2rem;
+            margin-left: 1.5rem;
             margin-bottom: 1rem;
         }
 
         ul li {
             margin-bottom: 0.5rem;
         }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                margin-top: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .nav-links a {
+                padding: 1rem 0;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .container {
+                margin: 1rem auto;
+            }
+        }
+
+        /* Tablet styles */
+        @media (min-width: 769px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                padding: 4rem 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .content {
+                padding: 2rem;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .container {
+                padding: 0 2rem;
+            }
+        }
+
+        /* Desktop styles */
+        @media (min-width: 1024px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">⚔️ HEMA for Dummies</div>
-            <ul class="nav-links">
-                <li><a href="{{ route('home') }}">Home</a></li>
-                <li><a href="{{ route('fencing.about') }}">About HEMA</a></li>
-                <li><a href="{{ route('fencing.techniques') }}">Techniques</a></li>
-                <li><a href="{{ route('fencing.equipment') }}">Equipment</a></li>
-                <li><a href="{{ route('gallery.index') }}">Gallery</a></li> <!-- fixed -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">⚔️ HEMA for Dummies</div>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="{{ route('home') }}">Home</a></li>
+            <li><a href="{{ route('fencing.about') }}">About HEMA</a></li>
+            <li><a href="{{ route('fencing.techniques') }}">Techniques</a></li>
+            <li><a href="{{ route('fencing.equipment') }}">Equipment</a></li>
+            <li><a href="{{ route('gallery.index') }}">Gallery</a></li>
+        </ul>
+    </div>
+</nav>
 
+@yield('content')
 
-            </ul>
-        </div>
-    </nav>
+<footer>
+    <p>&copy; 2026 HEMA for Dummies. All rights reserved.</p>
+</footer>
 
-    @yield('content')
+<script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
 
-    <footer>
-        <p>&copy; 2026 HEMA for Dummies. All rights reserved.</p>
-    </footer>
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        }
+    });
+</script>
 </body>
 </html>
-
